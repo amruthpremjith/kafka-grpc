@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+option go_package = "github.com/amruthpremjith/kafka-producer-test/producer";
+
+package grpcproducer;
+
+
+
+service GRPCProducer{
+    rpc Produce(KafkaMessage) returns (ProducerAck) {}
+}
+
+message KafkaMessage {
+    string topic = 1;
+    bytes value = 2;
+}
+
+message ProducerAck{
+    int32 offset = 1;
+    int32 partition =2;
+}
+

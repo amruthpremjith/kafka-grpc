@@ -1,2 +1,2 @@
-# kafka-grpc
-GRPC client for connecting to kafka.
+# kafka-producer-test
+Testing out sarama
